@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opening GLOW 2026 · ParkingYou</title>
+  <meta name="description" content="Persoonlijke uitnodiging: beleef de opening van GLOW 2026 met ParkingYou. Zaterdag 7 november, walking dinner en droneshow in het Philips Stadion.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#05071c">
+  <meta property="og:title" content="Uitnodiging: opening GLOW 2026 met ParkingYou">
+  <meta property="og:description" content="Za 7 november · 17.15 – 20.30 uur · walking dinner &amp; droneshow in het Philips Stadion">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #05071c;
+      --blue: #192aa2;
+      --cyan: #0ad3e6;
+      --orange: #ff8400;
+      --ink: #06093a;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, .72);
+      --line: rgba(255, 255, 255, .15);
+      --card: rgba(255, 255, 255, .06);
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: var(--night);
+      color: var(--text);
+      font: 400 17px/1.55 Ubuntu, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    [hidden] { display: none !important; }
+    a { color: inherit; text-underline-offset: 3px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* Nachtlucht met GLOW-licht en een 'zwerm drones' */
+    .sky {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(60vmax 45vmax at 88% -8%, rgba(10, 211, 230, .30), transparent 60%),
+        radial-gradient(55vmax 50vmax at -12% 32%, rgba(25, 42, 162, .60), transparent 65%),
+        radial-gradient(50vmax 40vmax at 112% 82%, rgba(124, 58, 237, .22), transparent 60%),
+        radial-gradient(40vmax 30vmax at 18% 112%, rgba(255, 132, 0, .12), transparent 60%),
+        var(--night);
+    }
+    .sky::after {
+      content: ""; position: absolute; inset: -5%;
+      background-image: radial-gradient(circle, rgba(10, 211, 230, .95) 0 1.2px, transparent 1.9px);
+      background-size: 28px 28px;
+      -webkit-mask-image: radial-gradient(40vmax 24vmax at 80% 10%, #000, transparent 70%);
+              mask-image: radial-gradient(40vmax 24vmax at 80% 10%, #000, transparent 70%);
+      transform-origin: 80% 10%;
+      animation: breathe 7s ease-in-out infinite alternate;
+    }
+    @keyframes breathe {
+      from { opacity: .25; transform: scale(1); }
+      to   { opacity: .7;  transform: scale(1.06); }
+    }
+
+    .wrap { width: min(680px, 100% - 32px); margin-inline: auto; }
+
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+    .top img { display: block; height: 34px; width: auto; }
+    .tag {
+      font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
+    }
+
+    /* Hero */
+    .hero { padding: 36px 0 32px; }
+    .eyebrow {
+      margin: 0 0 14px; color: var(--cyan);
+      font-size: .8rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(2.6rem, 10vw, 4.4rem); font-weight: 300; line-height: 1.02; letter-spacing: -.02em;
+    }
+    h1 strong, h2 strong { font-weight: 700; }
+    .lead { margin: 0 0 26px; max-width: 56ch; color: var(--muted); font-size: 1.12rem; }
+
+    .facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 32px; padding: 0; list-style: none; }
+    .facts li {
+      display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+      border: 1px solid var(--line); border-radius: 999px; background: var(--card);
+      font-size: .95rem; font-weight: 500;
+    }
+    .facts svg { width: 18px; height: 18px; color: var(--cyan); flex: none; }
+
+    /* Knop in de stijl van de campagne: pil met witte chevron-cirkel */
+    .pill {
+      display: inline-flex; align-items: center; gap: 14px;
+      padding: 9px 26px 9px 9px; border: 0; border-radius: 999px;
+      background: var(--cyan); color: var(--ink);
+      font: 700 1.15rem/1 Ubuntu, system-ui, sans-serif; text-decoration: none; cursor: pointer;
+      box-shadow: 0 12px 40px -12px rgba(10, 211, 230, .8);
+      transition: transform .2s, box-shadow .2s, opacity .2s;
+    }
+    .pill:hover { transform: translateY(-2px); box-shadow: 0 16px 50px -10px rgba(10, 211, 230, .95); }
+    .pill:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    .pill:disabled { opacity: .6; cursor: progress; transform: none; }
+    .chev { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fff; flex: none; }
+    .chev svg { width: 20px; height: 20px; color: var(--blue); }
+
+    .photo {
+      margin: 8px 0 60px; border: 1px solid var(--line); border-radius: 24px; overflow: hidden;
+      box-shadow: 0 30px 80px -30px rgba(10, 211, 230, .45);
+    }
+    .photo img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+
+    section { margin: 0 0 60px; }
+    h2 { margin: 0 0 24px; font-size: clamp(1.9rem, 6vw, 2.5rem); font-weight: 300; line-height: 1.1; letter-spacing: -.01em; }
+    h3 { margin: 0 0 4px; font-size: 1.1rem; font-weight: 700; }
+
+    /* Programma */
+    .timeline { margin: 0; padding: 0; list-style: none; }
+    .timeline li { display: grid; grid-template-columns: 58px 1fr; column-gap: 20px; }
+    .timeline time { padding-top: 1px; color: var(--cyan); font-size: 1.05rem; font-weight: 700; }
+    .step { position: relative; padding: 0 0 28px 24px; border-left: 1px solid var(--line); }
+    .timeline li:last-child .step { padding-bottom: 0; border-left-color: transparent; }
+    .step::before {
+      content: ""; position: absolute; left: -6px; top: 7px; width: 11px; height: 11px; border-radius: 50%;
+      background: var(--cyan); box-shadow: 0 0 0 4px rgba(10, 211, 230, .18), 0 0 16px rgba(10, 211, 230, .9);
+    }
+    .step p { margin: 0; color: var(--muted); }
+
+    /* Locaties */
+    .places { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .place { padding: 20px 22px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+    .place .label { color: var(--cyan); font-size: .78rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+    .place h3 { margin-top: 6px; font-size: 1.2rem; }
+    .place p { margin: 0 0 12px; color: var(--muted); }
+    .place a { font-weight: 500; }
+
+    /* RSVP */
+    .card {
+      padding: clamp(22px, 5vw, 38px); border: 1px solid var(--line); border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .035));
+      box-shadow: 0 40px 100px -40px rgba(25, 42, 162, .95);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    }
+    .card h2 { margin-bottom: 14px; }
+    .seats {
+      display: inline-flex; align-items: center; gap: 8px; margin: 0 0 24px; padding: 6px 13px;
+      border-radius: 999px; background: rgba(10, 211, 230, .12); color: var(--cyan);
+      font-size: .9rem; font-weight: 500;
+    }
+    .seats::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; }
+    .seats.full { background: rgba(255, 132, 0, .14); color: #ffb15c; }
+
+    .choice { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 22px; padding: 0; border: 0; }
+    .choice input { position: absolute; opacity: 0; pointer-events: none; }
+    .choice label {
+      display: flex; align-items: center; justify-content: center; padding: 15px 10px;
+      border: 1.5px solid var(--line); border-radius: 16px; text-align: center; font-weight: 500;
+      cursor: pointer; transition: border-color .2s, background .2s;
+    }
+    .choice label:hover { border-color: rgba(255, 255, 255, .35); }
+    .choice input:checked + label { border-color: var(--cyan); background: rgba(10, 211, 230, .14); }
+    .choice input:focus-visible + label { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+    .row { display: grid; grid-template-columns: 1fr; column-gap: 14px; }
+    @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+    .field { margin: 0 0 16px; }
+    .field > label { display: block; margin: 0 0 6px; font-size: .95rem; font-weight: 500; }
+    .opt { color: var(--muted); font-weight: 400; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%; padding: 13px 15px; border: 1.5px solid var(--line); border-radius: 14px;
+      background: rgba(5, 7, 28, .55); color: var(--text); font: inherit;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(255, 255, 255, .4); }
+    input:focus, textarea:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(10, 211, 230, .18); }
+    input[aria-invalid="true"] { border-color: #ffb15c; }
+    textarea { min-height: 96px; resize: vertical; }
+    .check { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; font-weight: 500; cursor: pointer; }
+    .check input { width: 20px; height: 20px; accent-color: var(--cyan); }
+    .hp { position: absolute; left: -9999px; }
+
+    .error { margin: 0 0 16px; padding: 12px 14px; border-radius: 12px; background: rgba(255, 132, 0, .14); color: #ffc58a; }
+    .privacy { margin: 18px 0 0; color: var(--muted); font-size: .85rem; }
+
+    .done { text-align: center; }
+    .done:focus { outline: none; }
+    .done-icon {
+      display: grid; place-items: center; width: 76px; height: 76px; margin: 4px auto 20px; border-radius: 50%;
+      background: rgba(10, 211, 230, .15); color: var(--cyan); box-shadow: 0 0 46px rgba(10, 211, 230, .45);
+    }
+    .done-icon svg { width: 34px; height: 34px; }
+    .done p { margin: 0 auto; max-width: 44ch; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; margin-top: 26px; }
+    .actions a { font-weight: 500; }
+    .linklike { margin-top: 22px; padding: 4px; border: 0; background: none; color: var(--muted); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+    footer { padding: 8px 0 56px; color: var(--muted); text-align: center; }
+    .sign { margin: 0; color: var(--text); font-size: 1.6rem; font-weight: 300; }
+    .sign strong { font-weight: 700; }
+    footer img { display: block; height: 28px; width: auto; margin: 26px auto 12px; opacity: .9; }
+    footer small { font-size: .85rem; }
+
+    .demo {
+      position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 10;
+      padding: 7px 14px; border-radius: 999px; background: var(--orange); color: #1a0d00;
+      font-size: .8rem; font-weight: 700; white-space: nowrap; box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .sky::after { animation: none; }
+      .pill { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="top">
+      <img src="assets/parkingyou-logo-wit.svg" alt="ParkingYou" width="124" height="34">
+      <span class="tag">GLOW 2026</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow" id="eyebrow">Persoonlijke uitnodiging</p>
+        <h1>Kom je mee naar de <strong>opening van GLOW</strong>?</h1>
+        <p class="lead">Op zaterdag 7 november gaat GLOW 2026 van start, met de allereerste droneshow van Eindhoven. Die avond beleven we graag samen met jou: eerst een borrel bij ons op kantoor, daarna lopen we samen naar het Philips Stadion voor een walking dinner en de droneshow.</p>
+        <ul class="facts">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Za 7 november 2026
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            17.15 – 20.30 uur
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Eindhoven
+          </li>
+        </ul>
+        <a class="pill" href="#rsvp">
+          <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
+          Meld je aan
+        </a>
+      </section>
+
+      <figure class="photo">
+        <img src="assets/eindhoven-by-night.jpg" width="1080" height="540" alt="Eindhoven bij nacht: lichtsporen rond de Blob op het 18 Septemberplein">
+      </figure>
+
+      <section aria-labelledby="programma">
+        <h2 id="programma">Het <strong>programma</strong></h2>
+        <ol class="timeline">
+          <li>
+            <time>17.15</time>
+            <div class="step">
+              <h3>Ontvangst op kantoor</h3>
+              <p>Bijpraten bij ParkingYou, met kleine hapjes en drankjes van onze buurman.</p>
+            </div>
+          </li>
+          <li>
+            <time>17.45</time>
+            <div class="step">
+              <h3>Samen op pad</h3>
+              <p>We lopen met z’n allen naar het Philips Stadion.</p>
+            </div>
+          </li>
+          <li>
+            <time>18.00</time>
+            <div class="step">
+              <h3>Walking dinner &amp; droneshow</h3>
+              <p>In het Philips Stadion genieten we van een walking dinner en kijken we naar de allereerste droneshow van Eindhoven.</p>
+            </div>
+          </li>
+          <li>
+            <time>20.30</time>
+            <div class="step">
+              <h3>Einde programma</h3>
+              <p>Daarna ben je vrij om op eigen gelegenheid de route van GLOW verder te lopen.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="locaties">
+        <h2 id="locaties">Waar we <strong>elkaar zien</strong></h2>
+        <div class="places">
+          <article class="place">
+            <span class="label">17.15 · Ontvangst</span>
+            <h3>ParkingYou</h3>
+            <p>Victoriapark 4<br>5611 BM Eindhoven</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Victoriapark+4+5611+BM+Eindhoven" target="_blank" rel="noopener">Route plannen</a>
+          </article>
+          <article class="place">
+            <span class="label">18.00 · Dinner &amp; droneshow</span>
+            <h3>Philips Stadion</h3>
+            <p>Frederiklaan 10a<br>5616 NH Eindhoven</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Philips+Stadion+Frederiklaan+10a+Eindhoven" target="_blank" rel="noopener">Route plannen</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="rsvp" aria-labelledby="rsvp-title">
+        <div class="card">
+          <div id="form-view">
+            <h2 id="rsvp-title">Ben je <strong>erbij?</strong></h2>
+            <p class="seats" id="seats" aria-live="polite">Beperkt aantal plaatsen</p>
+
+            <form id="rsvp-form" novalidate>
+              <fieldset class="choice">
+                <legend class="sr-only">Ben je erbij?</legend>
+                <input type="radio" name="attending" id="att-yes" value="ja" checked>
+                <label for="att-yes">Ja, ik ben erbij</label>
+                <input type="radio" name="attending" id="att-no" value="nee">
+                <label for="att-no">Nee, helaas niet</label>
+              </fieldset>
+
+              <div class="row">
+                <div class="field">
+                  <label for="name">Naam</label>
+                  <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+                </div>
+                <div class="field">
+                  <label for="company">Bedrijf</label>
+                  <input id="company" name="company" type="text" autocomplete="organization" maxlength="120" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">E-mailadres</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="160" required>
+              </div>
+
+              <div id="yes-only">
+                <div class="field" id="plus-one" hidden>
+                  <label class="check"><input type="checkbox" id="bring-guest"> Ik neem een introducé mee</label>
+                  <input id="guest" name="guest" type="text" maxlength="120" placeholder="Naam van je introducé" aria-label="Naam van je introducé" hidden>
+                </div>
+                <div class="field">
+                  <label for="diet">Dieetwensen of allergieën <span class="opt">(optioneel)</span></label>
+                  <input id="diet" name="diet" type="text" maxlength="300" placeholder="Bijv. vegetarisch of notenallergie">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="note">Opmerking <span class="opt">(optioneel)</span></label>
+                <textarea id="note" name="note" maxlength="1000"></textarea>
+              </div>
+
+              <div class="hp" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <p class="error" id="error" role="alert" hidden></p>
+
+              <button class="pill" type="submit" id="submit">
+                <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
+                <span id="submit-label">Verstuur aanmelding</span>
+              </button>
+              <p class="privacy">We gebruiken je gegevens alleen voor de organisatie van deze avond.</p>
+            </form>
+          </div>
+
+          <div class="done" id="done-view" tabindex="-1" hidden>
+            <div class="done-icon" id="done-icon" aria-hidden="true"></div>
+            <h2 id="done-title"></h2>
+            <p id="done-text"></p>
+            <div class="actions" id="calendar" hidden>
+              <button class="pill" type="button" id="ics">
+                <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                Zet in je agenda
+              </button>
+              <a id="gcal" target="_blank" rel="noopener">Google Agenda</a>
+            </div>
+            <button class="linklike" type="button" id="change">Antwoord wijzigen</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="sign">Graag tot <strong>7 november!</strong></p>
+      <p>Rick, Do, Murat &amp; Bram</p>
+      <img src="assets/parkingyou-logo-wit.svg" alt="ParkingYou" width="102" height="28">
+      <small>Vragen? Mail naar <a id="contact" href="mailto:info@parkingyou.nl">info@parkingyou.nl</a></small>
+    </footer>
+  </div>
+
+  <p class="demo" id="demo" hidden>Demo-modus · nog niet gekoppeld aan Google Sheets</p>
+
+  <script>
+    const CONFIG = {
+      // Web-app-URL van het Google Apps Script (zie README). Leeg = demo-modus, er wordt niets opgeslagen.
+      scriptUrl: '',
+      // Mogen gasten een introducé meenemen? Een introducé telt als extra kaart.
+      plusOne: false,
+      // Toon het exacte aantal vrije plekken zodra er zoveel (of minder) over zijn.
+      showSeatsBelow: 8,
+      contactEmail: 'info@parkingyou.nl',
+    };
+
+    const EVENT = {
+      title: 'Opening GLOW met ParkingYou',
+      start: '20261107T161500Z', // 17.15 uur Nederlandse tijd
+      end: '20261107T193000Z',   // 20.30 uur Nederlandse tijd
+      location: 'ParkingYou, Victoriapark 4, 5611 BM Eindhoven',
+      details: '17.15 Ontvangst op kantoor bij ParkingYou\n17.45 Samen naar het Philips Stadion\n18.00 Walking dinner en droneshow\n20.30 Einde programma',
+    };
+
+    const ICONS = {
+      check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+      wait: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+      wave: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>',
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const form = $('rsvp-form');
+    const fields = form.elements;
+    let seats = null;
+
+    // Persoonlijke links: ?naam=Jan%20Jansen&bedrijf=Acme&email=jan@acme.nl
+    const params = new URLSearchParams(location.search);
+    for (const [param, field] of [['naam', 'name'], ['bedrijf', 'company'], ['email', 'email']]) {
+      if (params.get(param)) fields[field].value = params.get(param);
+    }
+    if (params.get('naam')) $('eyebrow').textContent = `Persoonlijke uitnodiging voor ${params.get('naam')}`;
+
+    $('plus-one').hidden = !CONFIG.plusOne;
+    $('demo').hidden = Boolean(CONFIG.scriptUrl);
+    $('contact').href = `mailto:${CONFIG.contactEmail}`;
+    $('contact').textContent = CONFIG.contactEmail;
+
+    const isAttending = () => fields.attending.value === 'ja';
+    const bringsGuest = () => CONFIG.plusOne && isAttending() && $('bring-guest').checked;
+
+    function updateForm() {
+      $('yes-only').hidden = !isAttending();
+      $('guest').hidden = !$('bring-guest').checked;
+      $('submit-label').textContent = !isAttending() ? 'Verstuur antwoord'
+        : seats?.full ? 'Zet me op de wachtlijst'
+        : 'Verstuur aanmelding';
+    }
+    form.addEventListener('change', updateForm);
+
+    function renderSeats(state) {
+      seats = state;
+      const el = $('seats');
+      el.classList.toggle('full', state.full);
+      if (state.full) el.textContent = 'Vol · aanmelden voor de wachtlijst';
+      else if (state.remaining <= CONFIG.showSeatsBelow) el.textContent = state.remaining === 1 ? 'Nog maar 1 plek beschikbaar' : `Nog maar ${state.remaining} plekken beschikbaar`;
+      else el.textContent = 'Beperkt aantal plaatsen';
+      updateForm();
+    }
+
+    async function api(body) {
+      if (!CONFIG.scriptUrl) {
+        await new Promise((resolve) => setTimeout(resolve, 600));
+        return body ? { ok: true, status: body.attending ? 'Komt' : 'Komt niet' } : { ok: true, remaining: 26, full: false };
+      }
+      // Platte tekst als body houdt het een 'simple request', zodat Apps Script geen CORS-preflight krijgt.
+      const res = await fetch(CONFIG.scriptUrl, body ? { method: 'POST', body: JSON.stringify(body) } : undefined);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    }
+
+    function validate() {
+      const required = [fields.name, fields.company, fields.email];
+      if (bringsGuest()) required.push(fields.guest);
+      const invalid = required.filter((el) => el === fields.email
+        ? !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())
+        : !el.value.trim());
+      required.forEach((el) => el.setAttribute('aria-invalid', String(invalid.includes(el))));
+      if (!invalid.length) return '';
+      invalid[0].focus();
+      return invalid.length === 1 && invalid[0] === fields.email
+        ? 'Vul een geldig e-mailadres in.'
+        : 'Vul de gemarkeerde velden in.';
+    }
+
+    function showError(message) {
+      $('error').textContent = message;
+      $('error').hidden = !message;
+    }
+
+    function setHeading(el, plain, bold) {
+      const strong = document.createElement('strong');
+      strong.textContent = bold;
+      el.replaceChildren(plain, strong);
+    }
+
+    function showDone(status, name) {
+      const firstName = name.split(/\s+/)[0];
+      const view = {
+        'Komt': [ICONS.check, `Top, ${firstName}! `, 'Je bent erbij.', 'We zien je op zaterdag 7 november om 17.15 uur bij ons op kantoor. Zet de avond alvast in je agenda.'],
+        'Wachtlijst': [ICONS.wait, 'Je staat op de ', 'wachtlijst', 'Alle plekken zijn op dit moment vergeven. Komt er een plek vrij, dan nemen we direct contact met je op.'],
+        'Komt niet': [ICONS.wave, 'Jammer dat je er ', 'niet bij bent', 'Bedankt voor het laten weten. Hopelijk tot een volgende keer!'],
+      }[status];
+      $('done-icon').innerHTML = view[0];
+      setHeading($('done-title'), view[1], view[2]);
+      $('done-text').textContent = view[3];
+      $('calendar').hidden = status !== 'Komt';
+      $('form-view').hidden = true;
+      $('done-view').hidden = false;
+      $('done-view').focus();
+    }
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const invalid = validate();
+      showError(invalid);
+      if (invalid) return;
+
+      const button = $('submit');
+      const label = $('submit-label').textContent;
+      button.disabled = true;
+      $('submit-label').textContent = 'Even geduld…';
+      try {
+        const result = await api({
+          attending: isAttending(),
+          name: fields.name.value.trim(),
+          company: fields.company.value.trim(),
+          email: fields.email.value.trim(),
+          guest: bringsGuest() ? fields.guest.value.trim() : '',
+          diet: isAttending() ? fields.diet.value.trim() : '',
+          note: fields.note.value.trim(),
+          website: fields.website.value,
+        });
+        if (!result.ok) {
+          showError(result.error || 'Er ging iets mis. Probeer het nog eens.');
+          return;
+        }
+        if ('remaining' in result) renderSeats(result);
+        showDone(result.status, fields.name.value.trim());
+      } catch (err) {
+        console.error(err);
+        showError(`Er ging iets mis bij het versturen. Probeer het nog eens of mail naar ${CONFIG.contactEmail}.`);
+      } finally {
+        button.disabled = false;
+        if ($('submit-label').textContent === 'Even geduld…') $('submit-label').textContent = label;
+      }
+    });
+
+    $('change').addEventListener('click', () => {
+      $('done-view').hidden = true;
+      $('form-view').hidden = false;
+      updateForm();
+      fields.name.focus();
+    });
+
+    // Agenda: .ics-bestand (Apple, Outlook) en een Google Agenda-link
+    function icsFile() {
+      const escape = (text) => text.replace(/[\\,;]/g, (c) => `\\${c}`).replace(/\n/g, '\\n');
+      const fold = (line) => line.match(/.{1,73}/g).join('\r\n ');
+      const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      return [
+        'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ParkingYou//GLOW opening 2026//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        'UID:glow-opening-2026@parkingyou.nl',
+        `DTSTAMP:${stamp}`,
+        `DTSTART:${EVENT.start}`,
+        `DTEND:${EVENT.end}`,
+        `SUMMARY:${escape(EVENT.title)}`,
+        `LOCATION:${escape(EVENT.location)}`,
+        `DESCRIPTION:${escape(EVENT.details)}`,
+        'END:VEVENT', 'END:VCALENDAR',
+      ].map(fold).join('\r\n') + '\r\n';
+    }
+
+    $('ics').addEventListener('click', () => {
+      const url = URL.createObjectURL(new Blob([icsFile()], { type: 'text/calendar;charset=utf-8' }));
+      const link = Object.assign(document.createElement('a'), { href: url, download: 'opening-glow-parkingyou.ics' });
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+
+    $('gcal').href = 'https://calendar.google.com/calendar/render?' + new URLSearchParams({
+      action: 'TEMPLATE',
+      text: EVENT.title,
+      dates: `${EVENT.start}/${EVENT.end}`,
+      details: EVENT.details,
+      location: EVENT.location,
+    });
+
+    updateForm();
+    api().then((state) => state.ok && renderSeats(state)).catch(() => {});
+  </script>
+</body>
+</html>
