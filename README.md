@@ -34,7 +34,9 @@ Zolang dit leeg is, draait de pagina in **demo-modus** (oranje balkje onderin) e
 
 ### 3. Online zetten
 
-De repository is openbaar, dus GitHub Pages werkt gratis: **Settings → Pages → Deploy from a branch**, kies de branch en map `/ (root)`. De pagina staat dan op `https://rick040.github.io/py-glow-rsvp/`. Netlify of Vercel kan ook: het is één statische map.
+De site draait op **Vercel**, gekoppeld aan deze repository. Elke push naar `main` zet automatisch een nieuwe versie live. Er is geen build nodig (Framework Preset: *Other*).
+
+Deel de **productie-URL** (Vercel → project → Domains), niet de preview-URL van een losse deployment: preview-links vragen om een Vercel-login. Een eigen domein zoals `glow.parkingyou.nl` voeg je toe onder **Settings → Domains**.
 
 Test daarna één keer zelf: meld je aan, controleer de rij in de Sheet en verwijder die rij weer.
 
@@ -68,5 +70,5 @@ Datum, tijden en adressen staan als tekst in `index.html` (programma, locaties, 
 Je kunt naam, bedrijf en e-mail vooraf invullen via de link. De uitnodiging toont dan ook de naam:
 
 ```
-https://rick040.github.io/py-glow-rsvp/?naam=Jan%20Jansen&bedrijf=Acme&email=jan@acme.nl
+https://<productie-url>/?naam=Jan%20Jansen&bedrijf=Acme&email=jan@acme.nl
 ```
