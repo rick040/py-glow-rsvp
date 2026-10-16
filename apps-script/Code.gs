@@ -1,5 +1,5 @@
 /**
- * RSVP opening GLOW 2026: slaat aanmeldingen op in deze Google Sheet.
+ * RSVP GLOW 2026 met ParkingYou: slaat aanmeldingen op in deze Google Sheet.
  *
  * Installeren: open de spreadsheet → Extensies → Apps Script, plak dit bestand,
  * voer één keer setup() uit en publiceer via Implementeren → Nieuwe implementatie
@@ -47,7 +47,7 @@ function setup() {
   const overview = spreadsheet.getSheetByName('Overzicht') || spreadsheet.insertSheet('Overzicht', 0);
   const name = CONFIG.SHEET_NAME;
   overview.getRange('A1:B9').setValues([
-    ['Opening GLOW 2026, stand van de aanmeldingen', ''],
+    ['GLOW 2026 met ParkingYou, stand van de aanmeldingen', ''],
     ['Rekent automatisch mee met het tabblad ' + name + '.', ''],
     ['', ''],
     ['Kaarten totaal', CONFIG.CAPACITY],

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Opening GLOW 2026 · ParkingYou</title>
-  <meta name="description" content="Persoonlijke uitnodiging: beleef de opening van GLOW 2026 met ParkingYou. Zaterdag 7 november, walking dinner en droneshow in het Philips Stadion.">
+  <title>GLOW 2026 · ParkingYou</title>
+  <meta name="description" content="Persoonlijke uitnodiging: beleef GLOW 2026 met ParkingYou. Donderdag 12 november, walking dinner en droneshow in het Philips Stadion.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#05071c">
-  <meta property="og:title" content="Uitnodiging: opening GLOW 2026 met ParkingYou">
-  <meta property="og:description" content="Za 7 november · 17.15 – 20.30 uur · walking dinner &amp; droneshow in het Philips Stadion">
+  <meta property="og:title" content="Uitnodiging: GLOW 2026 met ParkingYou">
+  <meta property="og:description" content="Do 12 november · 17.15 – 20.30 uur · walking dinner &amp; droneshow in het Philips Stadion">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,12 +232,12 @@
     <main>
       <section class="hero">
         <p class="eyebrow" id="eyebrow">Persoonlijke uitnodiging</p>
-        <h1>Kom je mee naar de <strong>opening van GLOW</strong>?</h1>
-        <p class="lead">Op zaterdag 7 november gaat GLOW 2026 van start, met de allereerste droneshow van Eindhoven. Die avond beleven we graag samen met jou: eerst een borrel bij ons op kantoor, daarna lopen we samen naar het Philips Stadion voor een walking dinner en de droneshow.</p>
+        <h1>Kom je met ons mee naar <strong>GLOW</strong>?</h1>
+        <p class="lead">Op donderdag 12 november beleven we GLOW 2026 graag samen met jou. We beginnen met een borrel bij ons op kantoor en lopen daarna samen naar het Philips Stadion voor een walking dinner en de allereerste droneshow van Eindhoven.</p>
         <ul class="facts">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            Za 7 november 2026
+            Do 12 november 2026
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -389,7 +389,7 @@
     </main>
 
     <footer>
-      <p class="sign">Graag tot <strong>7 november!</strong></p>
+      <p class="sign">Graag tot <strong>12 november!</strong></p>
       <img src="assets/parkingyou-logo-wit.svg" alt="ParkingYou" width="102" height="28">
       <small>Vragen? Mail naar <a id="contact" href="mailto:info@parkingyou.nl">info@parkingyou.nl</a></small>
     </footer>
@@ -409,9 +409,9 @@
     };
 
     const EVENT = {
-      title: 'Opening GLOW met ParkingYou',
-      start: '20261107T161500Z', // 17.15 uur Nederlandse tijd
-      end: '20261107T193000Z',   // 20.30 uur Nederlandse tijd
+      title: 'GLOW met ParkingYou',
+      start: '20261112T161500Z', // 17.15 uur Nederlandse tijd
+      end: '20261112T193000Z',   // 20.30 uur Nederlandse tijd
       location: 'ParkingYou, Victoriapark 4, 5611 BM Eindhoven',
       details: '17.15 Ontvangst op kantoor bij ParkingYou\n17.45 Samen naar het Philips Stadion\n18.00 Walking dinner en droneshow\n20.30 Einde programma',
     };
@@ -500,7 +500,7 @@
     function showDone(status, name) {
       const firstName = name.split(/\s+/)[0];
       const view = {
-        'Komt': [ICONS.check, `Top, ${firstName}! `, 'Je bent erbij.', 'We zien je op zaterdag 7 november om 17.15 uur bij ons op kantoor. Zet de avond alvast in je agenda.'],
+        'Komt': [ICONS.check, `Top, ${firstName}! `, 'Je bent erbij.', 'We zien je op donderdag 12 november om 17.15 uur bij ons op kantoor. Zet de avond alvast in je agenda.'],
         'Wachtlijst': [ICONS.wait, 'Je staat op de ', 'wachtlijst', 'Alle plekken zijn op dit moment vergeven. Komt er een plek vrij, dan nemen we direct contact met je op.'],
         'Komt niet': [ICONS.wave, 'Jammer dat je er ', 'niet bij bent', 'Bedankt voor het laten weten. Hopelijk tot een volgende keer!'],
       }[status];
@@ -562,9 +562,9 @@
       const fold = (line) => line.match(/.{1,73}/g).join('\r\n ');
       const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
       return [
-        'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ParkingYou//GLOW opening 2026//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+        'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ParkingYou//GLOW 2026//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
         'BEGIN:VEVENT',
-        'UID:glow-opening-2026@parkingyou.nl',
+        'UID:glow-2026-parkingyou@parkingyou.nl',
         `DTSTAMP:${stamp}`,
         `DTSTART:${EVENT.start}`,
         `DTEND:${EVENT.end}`,
@@ -577,7 +577,7 @@
 
     $('ics').addEventListener('click', () => {
       const url = URL.createObjectURL(new Blob([icsFile()], { type: 'text/calendar;charset=utf-8' }));
-      const link = Object.assign(document.createElement('a'), { href: url, download: 'opening-glow-parkingyou.ics' });
+      const link = Object.assign(document.createElement('a'), { href: url, download: 'glow-parkingyou.ics' });
       document.body.append(link);
       link.click();
       link.remove();

@@ -1,6 +1,6 @@
-# Opening GLOW 2026 · RSVP
+# GLOW 2026 met ParkingYou · RSVP
 
-Uitnodiging met aanmeldformulier voor de opening van GLOW met relaties van ParkingYou (zaterdag 7 november 2026). Eén statische pagina; aanmeldingen komen via een Google Apps Script in een Google Sheet.
+Uitnodiging met aanmeldformulier voor een avond GLOW met relaties van ParkingYou (donderdag 12 november 2026). Eén statische pagina; aanmeldingen komen via een Google Apps Script in een Google Sheet.
 
 | Bestand | Wat |
 |---|---|
@@ -12,7 +12,7 @@ Uitnodiging met aanmeldformulier voor de opening van GLOW met relaties van Parki
 
 ### 1. Google Sheet koppelen
 
-1. Maak een lege Google Sheet (of gebruik *GLOW opening 2026 · RSVP* in Drive).
+1. Maak een lege Google Sheet (of gebruik *GLOW 2026 · RSVP* in Drive).
 2. Ga naar **Extensies → Apps Script**, vervang de inhoud van `Code.gs` door [`apps-script/Code.gs`](apps-script/Code.gs) en sla op.
 3. Kies bovenin de functie **`setup`** en klik op **Uitvoeren**. Geef toestemming als Google erom vraagt. Je krijgt dan:
    - een tabblad **RSVP** met kolommen, statuskleuren en Rick, Do, Murat en Bram als *Intern*;
