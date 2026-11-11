@@ -72,3 +72,7 @@ Je kunt naam, bedrijf en e-mail vooraf invullen via de link. De uitnodiging toon
 ```
 https://<productie-url>/?naam=Jan%20Jansen&bedrijf=Acme&email=jan@acme.nl
 ```
+
+## Bevestigingsmail
+
+`emails/bevestiging.html` is de bevestigingsmail voor gasten (opmaak in dezelfde stijl), `emails/bevestiging.txt` de tekstversie. `python3 emails/maak-eml.py` maakt daar `emails/bevestiging-glow.eml` van: dubbelklik dat bestand in Outlook en het opent als nieuw concept, met logo en foto in de mail zelf. Vul de plekken tussen [haken] in, zet de gasten in BCC en verstuur.
